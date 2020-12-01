@@ -19,7 +19,8 @@ data:
     content:
     - MIT and ASL 2.0 and ISC and BSD
   dependencies:
-  - buildrequires:
+  - platform: f32
+    buildrequires:
       postgresql: [9.6]
     requires:
       postgresql: [9.6]
@@ -70,7 +71,8 @@ data:
     content:
     - MIT and ASL 2.0 and ISC and BSD
   dependencies:
-  - buildrequires:
+  - platform: f32
+    buildrequires:
       postgresql: [9.8]
     requires:
       postgresql: [9.8]
@@ -123,7 +125,8 @@ data:
     content:
     - MIT and ASL 2.0 and ISC and BSD
   dependencies:
-  - buildrequires:
+  - platform: f32
+    buildrequires:
       postgresql: [9.6]
     requires:
       postgresql: [9.6]
@@ -174,7 +177,8 @@ data:
     content:
     - MIT and ASL 2.0 and ISC and BSD
   dependencies:
-  - buildrequires:
+  - platform: f32
+    buildrequires:
       postgresql: [9.8]
     requires:
       postgresql: [9.8]
@@ -240,7 +244,8 @@ data:
         postgresql:
           ref: 3f21ecc4af44639c7cb40244f5db7a48936e3452
   dependencies:
-  - buildrequires:
+  - platform: f32
+    buildrequires:
       platform: [f29]
     requires:
       platform: [f29]
@@ -310,6 +315,8 @@ data:
       rpms:
         postgresql:
           ref: 3f21ecc4af44639c7cb40244f5db7a48936e3452
+  dependencies:
+    - platform: f32
   references:
     community: https://docs.pagure.org/modularity/
     documentation: https://www.postgresql.org/docs/
