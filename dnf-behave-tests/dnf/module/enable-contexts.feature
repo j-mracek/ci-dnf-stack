@@ -51,8 +51,8 @@ Scenario: An error is printed with no stream and context is possible to enable
    When I execute dnf with args "module enable berry:raspberry"
    Then the exit code is 1
     And stderr contains "Modular dependency problems:"
-    And stderr contains "module biotope:pond.* conflicts with module\(biotope\) provided by biotope:wood:1:\.x86_64"
-    And stderr contains "module biotope:wood:1:\.x86_64 conflicts with module\(biotope\) provided by biotope:pond:1:\.x86_64"
+    And stderr contains "module biotope:pond.* conflicts with module\(biotope:wood\) provided by biotope:wood:1:\.x86_64"
+    And stderr contains "module biotope:wood:1:\.x86_64 conflicts with module\(biotope:pond\) provided by biotope:pond:1:\.x86_64"
 
 
 @not.with_os=rhel__eq__8
@@ -63,5 +63,5 @@ Scenario: An error is printed when trying to install different context
    When I execute dnf with args "module install berry:raspberry/default"
    Then the exit code is 1
     And stderr contains "Modular dependency problems:"
-    And stderr contains "module biotope:wood.* conflicts with module\(biotope\) provided by biotope:pond:1:\.x86_64"
-    And stderr contains "module biotope:pond.* conflicts with module\(biotope\) provided by biotope:wood:1:\.x86_64"
+    And stderr contains "module biotope:wood.* conflicts with module\(biotope:pond\) provided by biotope:pond:1:\.x86_64"
+    And stderr contains "module biotope:pond.* conflicts with module\(biotope:wood\) provided by biotope:wood:1:\.x86_64"
